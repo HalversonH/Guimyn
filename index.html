@@ -1,6 +1,7 @@
 <html>
 <head>
-	<script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
+
+<script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
 var player;
 
 function startplayer() 
@@ -48,14 +49,18 @@ function change_vol()
 input[type="image"]
 {
  float:center;
- height:20px;
+ height:2vh;
  margin-left:2px;
  margin-right:5px;
  margin-top:2px;
 }
+#change_vol{
+ display: grid;background-color:#000;
+ margin-left: 6vh;
+}
 #vol_img
 {
- width:1vh;
+ width:2vh;
 }
 @font-face {
 }
@@ -72,6 +77,13 @@ min-width: 900px;
 	margin-left: 5%;
 	margin-bottom: 0%;
   width: 100%;
+}.container {margin-left: 10%;
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 }
 h1{color: white; font-family: gg;}
 body{background-color: black;  }
@@ -79,7 +91,10 @@ body{background-color: black;  }
 </style>
 </head>
 <body>
-
+	<div class="container">
+		<div class="box">
+		
+		
 <h1 id="the">THE NBHD</h1>
 <img id="nbhd" src="imagem/main.png">
 <div id="wrapper">
@@ -92,6 +107,9 @@ body{background-color: black;  }
 <input type="image" src="imagem/stop.png" onclick="stop_aud()" id="play_button">
 <img src="imagem/vol.png" id="vol_img">
 <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+</div>
+</div>
+
 </div>
 </div>
 </body>
