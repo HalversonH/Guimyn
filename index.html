@@ -33,84 +33,72 @@ function change_vol()
 	@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 #wrapper
 {
- text-align:center;
- margin:0 auto;
- padding:0px;
- width:995px;
+
 }
 #player
 {
- background-color:black;
- width:390px;
- margin:auto;
- padding:5px;
- box-sizing:border-box;
+
 }
 input[type="image"]
 {
  float:center;
  height:2vh;
- margin-left:2px;
+ margin-left:15%;
  margin-right:5px;
  margin-top:2px;
 }
 #change_vol{
- display: grid;background-color:#000;
- margin-left: 6vh;
+ place-content: black;
 }
 #vol_img
 {
  width:2vh;
 }
-@font-face {
+
+#the{font-family: "Roboto";font-size: large; box-shadow: 10px; font-size: xxx-large ;
 }
-#the{font-family: "Roboto";font-size: 8vh;
-	position: absolute;
-	margin:5%;
-	
-text-align:center;
-max-width: 915px;
-min-width: 900px;
-}
-#nbhd{ position: grid;
-  margin:10%;
-	margin-left: 5%;
-	margin-bottom: 0%;
-  width: 100%;
-}.container {margin-left: 10%;
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+.container {
+	margin: 0px;
+	margin-bottom: 20%;
+	padding: 0px;
+background-color: black;
+text-align: center;
+border-radius: 50px;
+min-width: 320px;
+max-width: 550px;
+margin: auto;
 }
 h1{color: white; font-family: gg;}
-body{background-color: black;  }
+body{background-color: white;  }
 
 </style>
 </head>
 <body>
 	<div class="container">
-		<div class="box">
 		
 		
 <h1 id="the">THE NBHD</h1>
+<picture><source media="(max-width:600px)"srcset="imagem/mainpp.png">
 <img id="nbhd" src="imagem/main.png">
-<div id="wrapper">
+</picture>
+
 <div id='player'>
+
 <audio id="music_player">
 <source src="song/Reflections.mp3"/>
 </audio>
+
 <input type="image" src="imagem/play.png" onclick="play_aud()" id="play_button">
 <input type="image" src="imagem/pause.png" onclick="pause_aud()" id="play_button">
 <input type="image" src="imagem/stop.png" onclick="stop_aud()" id="play_button">
+
 <img src="imagem/vol.png" id="vol_img">
 <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
-</div>
-</div>
 
 </div>
 </div>
+
+
+
 </body>
 </html>
